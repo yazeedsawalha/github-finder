@@ -1,15 +1,11 @@
 import React from "react";
 import { useContext } from "react";
-import { useEffect } from "react";
 import GithubContext from "../../context/github/GithubContext";
 import Snipper from "../layouts/Snipper";
 import UserItem from "./UserItem";
 
 function UserResults() {
-  const { users, loading, fetchUser } = useContext(GithubContext);
-  useEffect(() => {
-    fetchUser();
-  }, []);
+  const { users, loading} = useContext(GithubContext);
 
   if (!loading) {
     return (
