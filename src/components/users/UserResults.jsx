@@ -5,7 +5,7 @@ import Snipper from "../layouts/Snipper";
 import UserItem from "./UserItem";
 
 function UserResults() {
-  const { users, loading} = useContext(GithubContext);
+  const { users, loading } = useContext(GithubContext);
 
   if (!loading) {
     return (
